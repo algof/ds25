@@ -6,4 +6,3 @@ python3 peer_node.py \
 	  --logger 192.168.122.6 5900 \
 	  --offset-ms 600 \
 	  --initiate-broadcast --msg "Hello from A"
-
