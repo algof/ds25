@@ -1,0 +1,94 @@
+[COLLECTOR] Listening on ('0.0.0.0', 5900)
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-A-1460299', 'sender': 'A', 'receiver': 'B', 'text': 'Hello from A', 'lamport': 1, 'vclock': {'A': 1, 'B': 0, 'C': 0, 'D': 0}, 'local_ts': 1766465060.153078, 'mono_send': 1460.299421844, '_collector_arrival': 1766465062.1544442}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-A-1460349', 'sender': 'A', 'receiver': 'C', 'text': 'Hello from A', 'lamport': 2, 'vclock': {'A': 2, 'B': 0, 'C': 0, 'D': 0}, 'local_ts': 1766465060.2035835, 'mono_send': 1460.349927646, '_collector_arrival': 1766465062.204316}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-A-1460400', 'sender': 'A', 'receiver': 'D', 'text': 'Hello from A', 'lamport': 3, 'vclock': {'A': 3, 'B': 0, 'C': 0, 'D': 0}, 'local_ts': 1766465060.2540205, 'mono_send': 1460.400364334, '_collector_arrival': 1766465062.254732}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-B-1465059', 'sender': 'B', 'receiver': 'A', 'text': 'Hello from B', 'lamport': 1, 'vclock': {'B': 1, 'A': 0, 'C': 0, 'D': 0}, 'local_ts': 1766465065.9128828, 'mono_send': 1465.059226486, '_collector_arrival': 1766465066.9140656}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'ack', 'id': 'ACK-A-1465070', 'sender': 'A', 'receiver': 'B', 'text': 'Ack:CHAT-B-1465059', 'lamport': 5, 'vclock': {'A': 5, 'B': 1, 'C': 0, 'D': 0}, 'local_ts': 1766465064.9239392, 'mono_send': 1465.070283026, '_collector_arrival': 1766465066.9255717}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-B-1465109', 'sender': 'B', 'receiver': 'C', 'text': 'Hello from B', 'lamport': 2, 'vclock': {'B': 2, 'A': 0, 'C': 0, 'D': 0}, 'local_ts': 1766465065.963288, 'mono_send': 1465.109632447, '_collector_arrival': 1766465066.9649231}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-B-1465160', 'sender': 'B', 'receiver': 'D', 'text': 'Hello from B', 'lamport': 3, 'vclock': {'B': 3, 'A': 0, 'C': 0, 'D': 0}, 'local_ts': 1766465066.0137513, 'mono_send': 1465.160095085, '_collector_arrival': 1766465067.0148585}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-C-1468852', 'sender': 'C', 'receiver': 'A', 'text': 'Hello from C', 'lamport': 1, 'vclock': {'C': 1, 'A': 0, 'B': 0, 'D': 0}, 'local_ts': 1766465071.706325, 'mono_send': 1468.852668764, '_collector_arrival': 1766465070.707025}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'ack', 'id': 'ACK-A-1468863', 'sender': 'A', 'receiver': 'C', 'text': 'Ack:CHAT-C-1468852', 'lamport': 7, 'vclock': {'A': 7, 'B': 1, 'C': 1, 'D': 0}, 'local_ts': 1766465068.7167425, 'mono_send': 1468.863086337, '_collector_arrival': 1766465070.7177618}
+[COLLECTOR] CHAT {'type': 'chat', 'kind': 'chat', 'id': 'CHAT-C-1468903', 'sender': 'C', 'receiver': 'B', 'text': 'Hello from C', 'lamport': 2, 'vclock': {'C': 2, 'A': 0, 'B': 0, 'D': 0}, 'local_ts': 1766465071.756772, 'mono_send': 1468.903116222, '_collector_arrival': 1766465070.7570457}
+
+=== Naive order (by sender local_ts) ??? may violate causality ===
+CHAT-A-1460299 A->B local_ts=1766465060.153 L=1 V={'A': 1, 'B': 0, 'C': 0, 'D': 0} "Hello from A"
+CHAT-A-1460349 A->C local_ts=1766465060.204 L=2 V={'A': 2, 'B': 0, 'C': 0, 'D': 0} "Hello from A"
+CHAT-A-1460400 A->D local_ts=1766465060.254 L=3 V={'A': 3, 'B': 0, 'C': 0, 'D': 0} "Hello from A"
+ACK-A-1465070 A->B local_ts=1766465064.924 L=5 V={'A': 5, 'B': 1, 'C': 0, 'D': 0} "Ack:CHAT-B-1465059"
+CHAT-B-1465059 B->A local_ts=1766465065.913 L=1 V={'B': 1, 'A': 0, 'C': 0, 'D': 0} "Hello from B"
+CHAT-B-1465109 B->C local_ts=1766465065.963 L=2 V={'B': 2, 'A': 0, 'C': 0, 'D': 0} "Hello from B"
+CHAT-B-1465160 B->D local_ts=1766465066.014 L=3 V={'B': 3, 'A': 0, 'C': 0, 'D': 0} "Hello from B"
+ACK-A-1468863 A->C local_ts=1766465068.717 L=7 V={'A': 7, 'B': 1, 'C': 1, 'D': 0} "Ack:CHAT-C-1468852"
+CHAT-C-1468852 C->A local_ts=1766465071.706 L=1 V={'C': 1, 'A': 0, 'B': 0, 'D': 0} "Hello from C"
+CHAT-C-1468903 C->B local_ts=1766465071.757 L=2 V={'C': 2, 'A': 0, 'B': 0, 'D': 0} "Hello from C"
+
+=== Causal order (Lamport total order) ===
+CHAT-A-1460299 A->B L=1 V={'A': 1, 'B': 0, 'C': 0, 'D': 0} "Hello from A"
+CHAT-B-1465059 B->A L=1 V={'B': 1, 'A': 0, 'C': 0, 'D': 0} "Hello from B"
+CHAT-C-1468852 C->A L=1 V={'C': 1, 'A': 0, 'B': 0, 'D': 0} "Hello from C"
+CHAT-A-1460349 A->C L=2 V={'A': 2, 'B': 0, 'C': 0, 'D': 0} "Hello from A"
+CHAT-B-1465109 B->C L=2 V={'B': 2, 'A': 0, 'C': 0, 'D': 0} "Hello from B"
+CHAT-C-1468903 C->B L=2 V={'C': 2, 'A': 0, 'B': 0, 'D': 0} "Hello from C"
+CHAT-A-1460400 A->D L=3 V={'A': 3, 'B': 0, 'C': 0, 'D': 0} "Hello from A"
+CHAT-B-1465160 B->D L=3 V={'B': 3, 'A': 0, 'C': 0, 'D': 0} "Hello from B"
+ACK-A-1465070 A->B L=5 V={'A': 5, 'B': 1, 'C': 0, 'D': 0} "Ack:CHAT-B-1465059"
+ACK-A-1468863 A->C L=7 V={'A': 7, 'B': 1, 'C': 1, 'D': 0} "Ack:CHAT-C-1468852"
+
+=== Causal order (Vector-clock topological order) ===
+CHAT-A-1460299 A->B V={'A': 1, 'B': 0, 'C': 0, 'D': 0} L=1 "Hello from A"
+CHAT-B-1465059 B->A V={'B': 1, 'A': 0, 'C': 0, 'D': 0} L=1 "Hello from B"
+CHAT-C-1468852 C->A V={'C': 1, 'A': 0, 'B': 0, 'D': 0} L=1 "Hello from C"
+CHAT-A-1460349 A->C V={'A': 2, 'B': 0, 'C': 0, 'D': 0} L=2 "Hello from A"
+CHAT-B-1465109 B->C V={'B': 2, 'A': 0, 'C': 0, 'D': 0} L=2 "Hello from B"
+CHAT-C-1468903 C->B V={'C': 2, 'A': 0, 'B': 0, 'D': 0} L=2 "Hello from C"
+CHAT-A-1460400 A->D V={'A': 3, 'B': 0, 'C': 0, 'D': 0} L=3 "Hello from A"
+CHAT-B-1465160 B->D V={'B': 3, 'A': 0, 'C': 0, 'D': 0} L=3 "Hello from B"
+ACK-A-1465070 A->B V={'A': 5, 'B': 1, 'C': 0, 'D': 0} L=5 "Ack:CHAT-B-1465059"
+ACK-A-1468863 A->C V={'A': 7, 'B': 1, 'C': 1, 'D': 0} L=7 "Ack:CHAT-C-1468852"
+
+=== Vector-clock relations (pairwise) ===
+CHAT-A-1460299 -> CHAT-A-1460349 (a happens-before b)
+CHAT-A-1460299 -> CHAT-A-1460400 (a happens-before b)
+CHAT-A-1460299 || CHAT-B-1465059 (concurrent)
+CHAT-A-1460299 -> ACK-A-1465070 (a happens-before b)
+CHAT-A-1460299 || CHAT-B-1465109 (concurrent)
+CHAT-A-1460299 || CHAT-B-1465160 (concurrent)
+CHAT-A-1460299 || CHAT-C-1468852 (concurrent)
+CHAT-A-1460299 -> ACK-A-1468863 (a happens-before b)
+CHAT-A-1460299 || CHAT-C-1468903 (concurrent)
+CHAT-A-1460349 -> CHAT-A-1460400 (a happens-before b)
+CHAT-A-1460349 || CHAT-B-1465059 (concurrent)
+CHAT-A-1460349 -> ACK-A-1465070 (a happens-before b)
+CHAT-A-1460349 || CHAT-B-1465109 (concurrent)
+CHAT-A-1460349 || CHAT-B-1465160 (concurrent)
+CHAT-A-1460349 || CHAT-C-1468852 (concurrent)
+CHAT-A-1460349 -> ACK-A-1468863 (a happens-before b)
+CHAT-A-1460349 || CHAT-C-1468903 (concurrent)
+CHAT-A-1460400 || CHAT-B-1465059 (concurrent)
+CHAT-A-1460400 -> ACK-A-1465070 (a happens-before b)
+CHAT-A-1460400 || CHAT-B-1465109 (concurrent)
+CHAT-A-1460400 || CHAT-B-1465160 (concurrent)
+CHAT-A-1460400 || CHAT-C-1468852 (concurrent)
+CHAT-A-1460400 -> ACK-A-1468863 (a happens-before b)
+CHAT-A-1460400 || CHAT-C-1468903 (concurrent)
+CHAT-B-1465059 -> ACK-A-1465070 (a happens-before b)
+CHAT-B-1465059 -> CHAT-B-1465109 (a happens-before b)
+CHAT-B-1465059 -> CHAT-B-1465160 (a happens-before b)
+CHAT-B-1465059 || CHAT-C-1468852 (concurrent)
+CHAT-B-1465059 -> ACK-A-1468863 (a happens-before b)
+CHAT-B-1465059 || CHAT-C-1468903 (concurrent)
+ACK-A-1465070 || CHAT-B-1465109 (concurrent)
+ACK-A-1465070 || CHAT-B-1465160 (concurrent)
+ACK-A-1465070 || CHAT-C-1468852 (concurrent)
+ACK-A-1465070 -> ACK-A-1468863 (a happens-before b)
+ACK-A-1465070 || CHAT-C-1468903 (concurrent)
+CHAT-B-1465109 -> CHAT-B-1465160 (a happens-before b)
+CHAT-B-1465109 || CHAT-C-1468852 (concurrent)
+CHAT-B-1465109 || ACK-A-1468863 (concurrent)
+CHAT-B-1465109 || CHAT-C-1468903 (concurrent)
+CHAT-B-1465160 || CHAT-C-1468852 (concurrent)
+CHAT-B-1465160 || ACK-A-1468863 (concurrent)
+CHAT-B-1465160 || CHAT-C-1468903 (concurrent)
+CHAT-C-1468852 -> ACK-A-1468863 (a happens-before b)
+CHAT-C-1468852 -> CHAT-C-1468903 (a happens-before b)
+ACK-A-1468863 || CHAT-C-1468903 (concurrent)

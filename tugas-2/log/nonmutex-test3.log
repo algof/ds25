@@ -1,0 +1,142 @@
+[LOGGER] listening on 9000
+
+================ TRACE (last 48 events) ================
+-- Physical order --
+t=1766674093.820711 L= 14 V=[3, 10, 8, 0] node=2 APPLY_LOCAL color=black
+t=1766674093.821182 L= 15 V=[3, 11, 8, 0] node=2 REPL_SEND color=black
+t=1766674093.822291 L= 16 V=[9, 11, 8, 0] node=1 REPL_RECV color=black
+t=1766674093.822849 L= 16 V=[3, 11, 10, 0] node=3 REPL_RECV color=black
+t=1766674093.825961 L= 16 V=[3, 11, 8, 7] node=4 REPL_RECV color=black
+t=1766674093.855052 L= 17 V=[3, 11, 11, 0] node=3 APPLY_LOCAL color=magenta
+t=1766674093.855178 L= 18 V=[3, 11, 12, 0] node=3 REPL_SEND color=magenta
+t=1766674093.856600 L= 19 V=[10, 11, 12, 0] node=1 REPL_RECV color=magenta
+t=1766674093.857017 L= 19 V=[3, 12, 12, 0] node=2 REPL_RECV color=magenta
+t=1766674093.857702 L= 19 V=[3, 11, 12, 8] node=4 REPL_RECV color=magenta
+t=1766674093.889197 L= 19 V=[3, 11, 13, 0] node=3 APPLY_LOCAL warna=kuning
+t=1766674093.889337 L= 20 V=[3, 11, 14, 0] node=3 REPL_SEND warna=kuning
+t=1766674093.890421 L= 21 V=[11, 11, 14, 0] node=1 REPL_RECV warna=kuning
+t=1766674093.890588 L= 21 V=[3, 13, 14, 0] node=2 REPL_RECV warna=kuning
+t=1766674093.892105 L= 21 V=[3, 11, 14, 9] node=4 REPL_RECV warna=kuning
+t=1766674093.921372 L= 21 V=[3, 11, 15, 0] node=3 APPLY_LOCAL warna=kuning
+t=1766674093.921675 L= 22 V=[3, 11, 16, 0] node=3 REPL_SEND warna=kuning
+t=1766674093.922754 L= 23 V=[12, 11, 16, 0] node=1 REPL_RECV warna=kuning
+t=1766674093.923383 L= 23 V=[3, 14, 16, 0] node=2 REPL_RECV warna=kuning
+t=1766674093.924189 L= 23 V=[3, 11, 16, 10] node=4 REPL_RECV warna=kuning
+t=1766674093.957126 L= 24 V=[13, 11, 16, 0] node=1 APPLY_LOCAL color=blue
+t=1766674093.957202 L= 24 V=[3, 15, 16, 0] node=2 APPLY_LOCAL color=green
+t=1766674093.957523 L= 25 V=[14, 11, 16, 0] node=1 REPL_SEND color=blue
+t=1766674093.957623 L= 25 V=[3, 16, 16, 0] node=2 REPL_SEND color=green
+t=1766674093.959434 L= 26 V=[14, 17, 16, 0] node=2 REPL_RECV color=blue
+t=1766674093.959566 L= 26 V=[15, 16, 16, 0] node=1 REPL_RECV color=green
+t=1766674093.960607 L= 26 V=[14, 11, 17, 0] node=3 REPL_RECV color=blue
+t=1766674093.960810 L= 27 V=[14, 16, 18, 0] node=3 REPL_RECV color=green
+t=1766674093.961549 L= 26 V=[14, 11, 16, 11] node=4 REPL_RECV color=blue
+t=1766674093.962424 L= 27 V=[14, 16, 16, 12] node=4 REPL_RECV color=green
+t=1766674093.993860 L= 27 V=[14, 18, 16, 0] node=2 APPLY_LOCAL warna=hijau
+t=1766674093.994168 L= 27 V=[16, 16, 16, 0] node=1 APPLY_LOCAL warna=oranye
+t=1766674093.994264 L= 28 V=[14, 19, 16, 0] node=2 REPL_SEND warna=hijau
+t=1766674093.994516 L= 28 V=[17, 16, 16, 0] node=1 REPL_SEND warna=oranye
+t=1766674093.995415 L= 29 V=[18, 19, 16, 0] node=1 REPL_RECV warna=hijau
+t=1766674093.995916 L= 29 V=[14, 19, 19, 0] node=3 REPL_RECV warna=hijau
+t=1766674093.996330 L= 29 V=[17, 20, 16, 0] node=2 REPL_RECV warna=oranye
+t=1766674093.997093 L= 30 V=[17, 19, 20, 0] node=3 REPL_RECV warna=oranye
+t=1766674093.997211 L= 29 V=[14, 19, 16, 13] node=4 REPL_RECV warna=hijau
+t=1766674093.998024 L= 30 V=[17, 19, 16, 14] node=4 REPL_RECV warna=oranye
+t=1766674094.029672 L= 30 V=[19, 19, 16, 0] node=1 GET color
+t=1766674094.031082 L= 30 V=[17, 21, 16, 0] node=2 GET color
+t=1766674094.032570 L= 31 V=[17, 19, 21, 0] node=3 GET color
+t=1766674094.033689 L= 31 V=[17, 19, 16, 15] node=4 GET color
+t=1766674094.063940 L= 31 V=[20, 19, 16, 0] node=1 GET warna
+t=1766674094.065359 L= 31 V=[17, 22, 16, 0] node=2 GET warna
+t=1766674094.066604 L= 32 V=[17, 19, 22, 0] node=3 GET warna
+t=1766674094.068150 L= 32 V=[17, 19, 16, 16] node=4 GET warna
+-- Lamport order --
+L= 14 t=1766674093.820711 V=[3, 10, 8, 0] node=2 APPLY_LOCAL color=black
+L= 15 t=1766674093.821182 V=[3, 11, 8, 0] node=2 REPL_SEND color=black
+L= 16 t=1766674093.822291 V=[9, 11, 8, 0] node=1 REPL_RECV color=black
+L= 16 t=1766674093.822849 V=[3, 11, 10, 0] node=3 REPL_RECV color=black
+L= 16 t=1766674093.825961 V=[3, 11, 8, 7] node=4 REPL_RECV color=black
+L= 17 t=1766674093.855052 V=[3, 11, 11, 0] node=3 APPLY_LOCAL color=magenta
+L= 18 t=1766674093.855178 V=[3, 11, 12, 0] node=3 REPL_SEND color=magenta
+L= 19 t=1766674093.856600 V=[10, 11, 12, 0] node=1 REPL_RECV color=magenta
+L= 19 t=1766674093.857017 V=[3, 12, 12, 0] node=2 REPL_RECV color=magenta
+L= 19 t=1766674093.889197 V=[3, 11, 13, 0] node=3 APPLY_LOCAL warna=kuning
+L= 19 t=1766674093.857702 V=[3, 11, 12, 8] node=4 REPL_RECV color=magenta
+L= 20 t=1766674093.889337 V=[3, 11, 14, 0] node=3 REPL_SEND warna=kuning
+L= 21 t=1766674093.890421 V=[11, 11, 14, 0] node=1 REPL_RECV warna=kuning
+L= 21 t=1766674093.890588 V=[3, 13, 14, 0] node=2 REPL_RECV warna=kuning
+L= 21 t=1766674093.921372 V=[3, 11, 15, 0] node=3 APPLY_LOCAL warna=kuning
+L= 21 t=1766674093.892105 V=[3, 11, 14, 9] node=4 REPL_RECV warna=kuning
+L= 22 t=1766674093.921675 V=[3, 11, 16, 0] node=3 REPL_SEND warna=kuning
+L= 23 t=1766674093.922754 V=[12, 11, 16, 0] node=1 REPL_RECV warna=kuning
+L= 23 t=1766674093.923383 V=[3, 14, 16, 0] node=2 REPL_RECV warna=kuning
+L= 23 t=1766674093.924189 V=[3, 11, 16, 10] node=4 REPL_RECV warna=kuning
+L= 24 t=1766674093.957126 V=[13, 11, 16, 0] node=1 APPLY_LOCAL color=blue
+L= 24 t=1766674093.957202 V=[3, 15, 16, 0] node=2 APPLY_LOCAL color=green
+L= 25 t=1766674093.957523 V=[14, 11, 16, 0] node=1 REPL_SEND color=blue
+L= 25 t=1766674093.957623 V=[3, 16, 16, 0] node=2 REPL_SEND color=green
+L= 26 t=1766674093.959566 V=[15, 16, 16, 0] node=1 REPL_RECV color=green
+L= 26 t=1766674093.959434 V=[14, 17, 16, 0] node=2 REPL_RECV color=blue
+L= 26 t=1766674093.960607 V=[14, 11, 17, 0] node=3 REPL_RECV color=blue
+L= 26 t=1766674093.961549 V=[14, 11, 16, 11] node=4 REPL_RECV color=blue
+L= 27 t=1766674093.994168 V=[16, 16, 16, 0] node=1 APPLY_LOCAL warna=oranye
+L= 27 t=1766674093.993860 V=[14, 18, 16, 0] node=2 APPLY_LOCAL warna=hijau
+L= 27 t=1766674093.960810 V=[14, 16, 18, 0] node=3 REPL_RECV color=green
+L= 27 t=1766674093.962424 V=[14, 16, 16, 12] node=4 REPL_RECV color=green
+L= 28 t=1766674093.994516 V=[17, 16, 16, 0] node=1 REPL_SEND warna=oranye
+L= 28 t=1766674093.994264 V=[14, 19, 16, 0] node=2 REPL_SEND warna=hijau
+L= 29 t=1766674093.995415 V=[18, 19, 16, 0] node=1 REPL_RECV warna=hijau
+L= 29 t=1766674093.996330 V=[17, 20, 16, 0] node=2 REPL_RECV warna=oranye
+L= 29 t=1766674093.995916 V=[14, 19, 19, 0] node=3 REPL_RECV warna=hijau
+L= 29 t=1766674093.997211 V=[14, 19, 16, 13] node=4 REPL_RECV warna=hijau
+L= 30 t=1766674094.029672 V=[19, 19, 16, 0] node=1 GET color
+L= 30 t=1766674094.031082 V=[17, 21, 16, 0] node=2 GET color
+L= 30 t=1766674093.997093 V=[17, 19, 20, 0] node=3 REPL_RECV warna=oranye
+L= 30 t=1766674093.998024 V=[17, 19, 16, 14] node=4 REPL_RECV warna=oranye
+L= 31 t=1766674094.063940 V=[20, 19, 16, 0] node=1 GET warna
+L= 31 t=1766674094.065359 V=[17, 22, 16, 0] node=2 GET warna
+L= 31 t=1766674094.032570 V=[17, 19, 21, 0] node=3 GET color
+L= 31 t=1766674094.033689 V=[17, 19, 16, 15] node=4 GET color
+L= 32 t=1766674094.066604 V=[17, 19, 22, 0] node=3 GET warna
+L= 32 t=1766674094.068150 V=[17, 19, 16, 16] node=4 GET warna
+-- Vector partial order (layers of concurrent sets) --
+Layer 1: n2:APPLY_LOCAL:color=black@[3, 10, 8, 0]
+Layer 2: n2:REPL_SEND:color=black@[3, 11, 8, 0]
+Layer 3: n1:REPL_RECV:color=black@[9, 11, 8, 0], n3:REPL_RECV:color=black@[3, 11, 10, 0], n4:REPL_RECV:color=black@[3, 11, 8, 7]
+Layer 4: n3:APPLY_LOCAL:color=magenta@[3, 11, 11, 0]
+Layer 5: n3:REPL_SEND:color=magenta@[3, 11, 12, 0]
+Layer 6: n1:REPL_RECV:color=magenta@[10, 11, 12, 0], n2:REPL_RECV:color=magenta@[3, 12, 12, 0], n4:REPL_RECV:color=magenta@[3, 11, 12, 8], n3:APPLY_LOCAL:warna=kuning@[3, 11, 13, 0]
+Layer 7: n3:REPL_SEND:warna=kuning@[3, 11, 14, 0]
+Layer 8: n1:REPL_RECV:warna=kuning@[11, 11, 14, 0], n2:REPL_RECV:warna=kuning@[3, 13, 14, 0], n4:REPL_RECV:warna=kuning@[3, 11, 14, 9], n3:APPLY_LOCAL:warna=kuning@[3, 11, 15, 0]
+Layer 9: n3:REPL_SEND:warna=kuning@[3, 11, 16, 0]
+Layer 10: n1:REPL_RECV:warna=kuning@[12, 11, 16, 0], n2:REPL_RECV:warna=kuning@[3, 14, 16, 0], n4:REPL_RECV:warna=kuning@[3, 11, 16, 10]
+Layer 11: n1:APPLY_LOCAL:color=blue@[13, 11, 16, 0], n2:APPLY_LOCAL:color=green@[3, 15, 16, 0]
+Layer 12: n2:REPL_SEND:color=green@[3, 16, 16, 0], n1:REPL_SEND:color=blue@[14, 11, 16, 0]
+Layer 13: n2:REPL_RECV:color=blue@[14, 17, 16, 0], n1:REPL_RECV:color=green@[15, 16, 16, 0], n3:REPL_RECV:color=blue@[14, 11, 17, 0], n4:REPL_RECV:color=blue@[14, 11, 16, 11]
+Layer 14: n3:REPL_RECV:color=green@[14, 16, 18, 0], n4:REPL_RECV:color=green@[14, 16, 16, 12], n2:APPLY_LOCAL:warna=hijau@[14, 18, 16, 0], n1:APPLY_LOCAL:warna=oranye@[16, 16, 16, 0]
+Layer 15: n2:REPL_SEND:warna=hijau@[14, 19, 16, 0], n1:REPL_SEND:warna=oranye@[17, 16, 16, 0]
+Layer 16: n1:REPL_RECV:warna=hijau@[18, 19, 16, 0], n3:REPL_RECV:warna=hijau@[14, 19, 19, 0], n2:REPL_RECV:warna=oranye@[17, 20, 16, 0], n4:REPL_RECV:warna=hijau@[14, 19, 16, 13]
+Layer 17: n3:REPL_RECV:warna=oranye@[17, 19, 20, 0], n4:REPL_RECV:warna=oranye@[17, 19, 16, 14], n1:GET:color@[19, 19, 16, 0], n2:GET:color@[17, 21, 16, 0]
+Layer 18: n3:GET:color@[17, 19, 21, 0], n4:GET:color@[17, 19, 16, 15], n1:GET:warna@[20, 19, 16, 0], n2:GET:warna@[17, 22, 16, 0]
+Layer 19: n3:GET:warna@[17, 19, 22, 0], n4:GET:warna@[17, 19, 16, 16]
+======================================================
+
+root@client:~/ds25/synchronization/mutex/testing# bash test3.sh
+[192.168.122.3:8003] PUT color black -> OK (4.29 ms)
+[192.168.122.4:8004] PUT color magenta -> OK (3.63 ms)
+[192.168.122.4:8004] PUT warna kuning -> OK (3.32 ms)
+[192.168.122.4:8004] PUT warna kuning -> OK (3.34 ms)
+[192.168.122.2:8002] PUT color blue -> OK (6.27 ms)
+[192.168.122.3:8003] PUT color green -> OK (5.15 ms)
+[192.168.122.2:8002] PUT warna oranye -> OK (5.62 ms)
+[192.168.122.3:8003] PUT warna hijau -> OK (3.78 ms)
+-------HASIL----
+[192.168.122.2:8002] GET color -> green (1.58 ms)
+[192.168.122.3:8003] GET color -> blue (0.95 ms)
+[192.168.122.4:8004] GET color -> green (1.65 ms)
+[192.168.122.5:8005] GET color -> green (0.91 ms)
+-------HASIL----
+[192.168.122.2:8002] GET warna -> hijau (1.64 ms)
+[192.168.122.3:8003] GET warna -> oranye (1.02 ms)
+[192.168.122.4:8004] GET warna -> oranye (1.52 ms)
+[192.168.122.5:8005] GET warna -> oranye (1.03 ms)

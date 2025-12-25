@@ -1,8 +1,1 @@
 venv/*
-tugas-1-run.log
-nonmutex-test1.log
-nonmutex-test2.log
-nonmutex-test3.log
-withmutex-test1.log
-withmutex-test2.log
-withmutex-test3.log

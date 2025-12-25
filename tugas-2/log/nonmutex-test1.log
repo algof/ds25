@@ -1,0 +1,64 @@
+[LOGGER] listening on 9000
+
+================ TRACE (last 20 events) ================
+-- Physical order --
+t=1766673739.948899 L=  1 V=[0, 1, 0, 0] node=2 APPLY_LOCAL color=blue
+t=1766673739.952100 L=  2 V=[0, 2, 0, 0] node=2 REPL_SEND color=blue
+t=1766673739.953591 L=  3 V=[1, 2, 0, 0] node=1 REPL_RECV color=blue
+t=1766673739.954269 L=  3 V=[0, 2, 1, 0] node=3 REPL_RECV color=blue
+t=1766673739.956284 L=  3 V=[0, 2, 0, 1] node=4 REPL_RECV color=blue
+t=1766673739.997077 L=  4 V=[0, 2, 2, 0] node=3 GET color
+t=1766673740.030912 L=  3 V=[0, 3, 0, 0] node=2 APPLY_LOCAL color=red
+t=1766673740.031174 L=  4 V=[0, 4, 0, 0] node=2 REPL_SEND color=red
+t=1766673740.031605 L=  4 V=[2, 2, 0, 0] node=1 APPLY_LOCAL color=blue
+t=1766673740.031797 L=  5 V=[3, 2, 0, 0] node=1 REPL_SEND color=blue
+t=1766673740.033307 L=  6 V=[4, 4, 0, 0] node=1 REPL_RECV color=red
+t=1766673740.034317 L=  5 V=[0, 4, 3, 0] node=3 REPL_RECV color=red
+t=1766673740.035237 L=  5 V=[0, 4, 0, 2] node=4 REPL_RECV color=red
+t=1766673740.035600 L=  6 V=[3, 5, 0, 0] node=2 REPL_RECV color=blue
+t=1766673740.036382 L=  6 V=[3, 4, 4, 0] node=3 REPL_RECV color=blue
+t=1766673740.037494 L=  6 V=[3, 4, 0, 3] node=4 REPL_RECV color=blue
+t=1766673740.066849 L=  7 V=[5, 4, 0, 0] node=1 GET color
+t=1766673740.068074 L=  7 V=[3, 6, 0, 0] node=2 GET color
+t=1766673740.069647 L=  7 V=[3, 4, 5, 0] node=3 GET color
+t=1766673740.070667 L=  7 V=[3, 4, 0, 4] node=4 GET color
+-- Lamport order --
+L=  1 t=1766673739.948899 V=[0, 1, 0, 0] node=2 APPLY_LOCAL color=blue
+L=  2 t=1766673739.952100 V=[0, 2, 0, 0] node=2 REPL_SEND color=blue
+L=  3 t=1766673739.953591 V=[1, 2, 0, 0] node=1 REPL_RECV color=blue
+L=  3 t=1766673740.030912 V=[0, 3, 0, 0] node=2 APPLY_LOCAL color=red
+L=  3 t=1766673739.954269 V=[0, 2, 1, 0] node=3 REPL_RECV color=blue
+L=  3 t=1766673739.956284 V=[0, 2, 0, 1] node=4 REPL_RECV color=blue
+L=  4 t=1766673740.031605 V=[2, 2, 0, 0] node=1 APPLY_LOCAL color=blue
+L=  4 t=1766673740.031174 V=[0, 4, 0, 0] node=2 REPL_SEND color=red
+L=  4 t=1766673739.997077 V=[0, 2, 2, 0] node=3 GET color
+L=  5 t=1766673740.031797 V=[3, 2, 0, 0] node=1 REPL_SEND color=blue
+L=  5 t=1766673740.034317 V=[0, 4, 3, 0] node=3 REPL_RECV color=red
+L=  5 t=1766673740.035237 V=[0, 4, 0, 2] node=4 REPL_RECV color=red
+L=  6 t=1766673740.033307 V=[4, 4, 0, 0] node=1 REPL_RECV color=red
+L=  6 t=1766673740.035600 V=[3, 5, 0, 0] node=2 REPL_RECV color=blue
+L=  6 t=1766673740.036382 V=[3, 4, 4, 0] node=3 REPL_RECV color=blue
+L=  6 t=1766673740.037494 V=[3, 4, 0, 3] node=4 REPL_RECV color=blue
+L=  7 t=1766673740.066849 V=[5, 4, 0, 0] node=1 GET color
+L=  7 t=1766673740.068074 V=[3, 6, 0, 0] node=2 GET color
+L=  7 t=1766673740.069647 V=[3, 4, 5, 0] node=3 GET color
+L=  7 t=1766673740.070667 V=[3, 4, 0, 4] node=4 GET color
+-- Vector partial order (layers of concurrent sets) --
+Layer 1: n2:APPLY_LOCAL:color=blue@[0, 1, 0, 0]
+Layer 2: n2:REPL_SEND:color=blue@[0, 2, 0, 0]
+Layer 3: n1:REPL_RECV:color=blue@[1, 2, 0, 0], n3:REPL_RECV:color=blue@[0, 2, 1, 0], n4:REPL_RECV:color=blue@[0, 2, 0, 1], n2:APPLY_LOCAL:color=red@[0, 3, 0, 0]
+Layer 4: n3:GET:color@[0, 2, 2, 0], n2:REPL_SEND:color=red@[0, 4, 0, 0], n1:APPLY_LOCAL:color=blue@[2, 2, 0, 0]
+Layer 5: n1:REPL_SEND:color=blue@[3, 2, 0, 0], n3:REPL_RECV:color=red@[0, 4, 3, 0], n4:REPL_RECV:color=red@[0, 4, 0, 2]
+Layer 6: n1:REPL_RECV:color=red@[4, 4, 0, 0], n2:REPL_RECV:color=blue@[3, 5, 0, 0], n3:REPL_RECV:color=blue@[3, 4, 4, 0], n4:REPL_RECV:color=blue@[3, 4, 0, 3]
+Layer 7: n1:GET:color@[5, 4, 0, 0], n2:GET:color@[3, 6, 0, 0], n3:GET:color@[3, 4, 5, 0], n4:GET:color@[3, 4, 0, 4]
+======================================================
+
+root@client:~/ds25/synchronization/mutex/testing# bash test1.sh
+[192.168.122.3:8003] PUT color blue -> OK (13.19 ms)
+[192.168.122.4:8004] GET color -> blue (1.85 ms)
+[192.168.122.2:8002] PUT color blue -> OK (8.14 ms)
+[192.168.122.3:8003] PUT color red -> OK (5.12 ms)
+[192.168.122.2:8002] GET color -> red (1.78 ms)
+[192.168.122.3:8003] GET color -> blue (0.69 ms)
+[192.168.122.4:8004] GET color -> blue (1.50 ms)
+[192.168.122.5:8005] GET color -> blue (0.92 ms)
